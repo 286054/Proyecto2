@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/playerShip1_blue.png" type="Texture" id=1]
+[ext_resource path="res://characters/player/Player.gd" type="Script" id=2]
+
+[node name="Player" type="Area2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 265.584, 788.011 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 228.768, 783.579, 232.119, 783.579, 233.795, 787.6, 239.491, 789.276, 255.911, 778.887, 259.597, 759.452, 271.996, 760.457, 274.342, 778.217, 292.102, 788.605, 297.128, 787.6, 299.139, 783.579, 302.49, 783.914, 301.15, 805.36, 299.474, 807.706, 296.793, 804.02, 292.772, 805.695, 275.682, 808.041, 271.996, 816.419, 259.262, 816.419, 255.576, 809.046, 238.151, 805.36, 234.8, 803.35, 231.784, 806.366 )
