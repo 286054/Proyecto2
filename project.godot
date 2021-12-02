@@ -8,9 +8,19 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://characters/player/Player.gd"
+} ]
+_global_script_class_icons={
+"Player": ""
+}
+
 [application]
 
-config/name="Proyecto Def"
+config/name="Proyecto De Gp"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
@@ -55,6 +65,8 @@ shoot={
 2d_physics/layer_1="env"
 2d_physics/layer_2="player"
 2d_physics/layer_3="enemies"
+2d_physics/layer_4="player_laser"
+2d_physics/layer_5="enemy_laser"
 
 [physics]
 

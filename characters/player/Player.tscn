@@ -4,12 +4,19 @@
 [ext_resource path="res://characters/player/Player.gd" type="Script" id=2]
 
 [node name="Player" type="Area2D"]
+collision_layer = 2
+collision_mask = 21
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 265.584, 788.011 )
+position = Vector2( 302, 603 )
 scale = Vector2( 0.75, 0.75 )
 texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( 228.768, 783.579, 232.119, 783.579, 233.795, 787.6, 239.491, 789.276, 255.911, 778.887, 259.597, 759.452, 271.996, 760.457, 274.342, 778.217, 292.102, 788.605, 297.128, 787.6, 299.139, 783.579, 302.49, 783.914, 301.15, 805.36, 299.474, 807.706, 296.793, 804.02, 292.772, 805.695, 275.682, 808.041, 271.996, 816.419, 259.262, 816.419, 255.576, 809.046, 238.151, 805.36, 234.8, 803.35, 231.784, 806.366 )
+polygon = PoolVector2Array( 265.268, 598.32, 268.321, 598.175, 270.647, 602.245, 275.154, 604.135, 292.744, 594.54, 295.942, 575.06, 307.717, 575.206, 311.206, 593.378, 328.07, 603.699, 331.995, 602.972, 335.629, 598.32, 339.7, 598.902, 337.228, 621.435, 334.176, 621.725, 333.013, 618.091, 329.814, 620.563, 312.369, 623.906, 308.008, 631.32, 295.942, 631.175, 291.581, 623.47, 273.554, 619.836, 271.665, 618.673, 270.356, 620.999, 267.594, 621.289 )
+
+[node name="Muzzle" type="Position2D" parent="."]
+position = Vector2( 302.6, 551.438 )
+
+[connection signal="area_entered" from="." to="." method="_on_Player_area_entered"]

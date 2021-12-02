@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://characters/player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/purple.png" type="Texture" id=2]
 [ext_resource path="res://characters/enemy/EnemySpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World.gd" type="Script" id=4]
 
 [node name="World" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Bg" type="Sprite" parent="."]
-position = Vector2( 1, 0 )
 texture = ExtResource( 2 )
 centered = false
 region_enabled = true
@@ -16,3 +17,13 @@ region_rect = Rect2( 0, 0, 540, 960 )
 [node name="EnemySpawner" parent="." instance=ExtResource( 3 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+
+[node name="Score" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 80.0
+margin_right = 124.0
+margin_bottom = 126.0
+text = "SCORE: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
